@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>LifeSteal - PapuServer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #0d1117;
+      color: #c9d1d9;
+      text-align: center;
+      padding: 40px;
+    }
+    h1 {
+      color: #58a6ff;
+    }
+    .box {
+      background-color: #161b22;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px #58a6ff80;
+    }
+    button {
+      background-color: #238636;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #2ea043;
+    }
+  </style>
+</head>
+<body>
+  <div class="box">
+    <h1>LifeSteal - PapuServer</h1>
+    <p>🖥️ <strong>IP:</strong> <span id="ip">papuserver.xyz</span></p>
+    <p>📟 <strong>Puerto:</strong> <span>19132</span></p>
+    <p>👥 <strong>Máximo:</strong> 45 jugadores</p>
+    <p>💀 Al morir no revives, ¡cada corazón cuenta!</p>
+    <br>
+    <button onclick="copiarIP()">📋 Copiar IP</button>
+    <p id="copiado" style="color: #58a6ff; display:none;">¡IP copiada al portapapeles!</p>
+    <br><br>
+    <p>📱 Abre Minecraft Bedrock → Jugar → Servidores → Agregar servidor</p>
+  </div>
+
+  <script>
+    function copiarIP() {
+      const ip = document.getElementById("ip").innerText;
+      navigator.clipboard.writeText(ip).then(() => {
+        document.getElementById("copiado").style.display = "block";
+        setTimeout(() => {
+          document.getElementById("copiado").style.display = "none";
+        }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
