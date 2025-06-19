@@ -2,9 +2,15 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <title>Minecraft Server</title>
   <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
     body {
       background: linear-gradient(135deg, #1f2937, #111827);
       color: #e0e7ff;
@@ -13,10 +19,9 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      min-height: 100vh;
-      margin: 0;
       text-align: center;
       padding: 24px;
+      box-sizing: border-box;
     }
     h1 {
       color: #3b82f6;
@@ -43,7 +48,8 @@
       box-shadow: 0 4px 14px #2563eb88;
       transition: background 0.3s ease, box-shadow 0.3s ease;
       width: 100%;
-      max-width: 320px;
+      max-width: 400px;
+      box-sizing: border-box;
     }
     a.button:hover {
       background: #1e40af;
@@ -53,13 +59,13 @@
       margin-top: 1.5em;
       font-size: 1rem;
       color: #94a3b8;
-      max-width: 420px;
+      max-width: 480px;
     }
 
-    /* Ajustes para pantallas pequeñas */
-    @media (max-width: 480px) {
+    /* Mejoras para pantallas pequeñas y en rotación */
+    @media (max-width: 768px) {
       h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
       p {
         font-size: 1.1rem;
@@ -77,6 +83,6 @@
   <a class="button" href="minecraft://?addExternalServer=papuserver.xyz|papuserver.xyz:19132">
     agregar servidor a minecraft
   </a>
-  <p class="note">* funciona en dispositivos android, ios y pc con minecraft bedrock instalado.</p>
+  <p class="note">* funciona en dispositivos android y pc con minecraft bedrock instalado.</p>
 </body>
 </html>
