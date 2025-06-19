@@ -1,64 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>LifeSteal - PapuServer</title>
+  <meta charset="UTF-8" />
+  <title>LifeSteal - Abrir Minecraft</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background-color: #0d1117;
-      color: #c9d1d9;
+      background: linear-gradient(135deg, #1f2937, #111827);
+      color: #e0e7ff;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
       text-align: center;
-      padding: 40px;
+      padding: 20px;
     }
     h1 {
-      color: #58a6ff;
+      color: #3b82f6;
+      font-size: 2.8rem;
+      margin-bottom: 0.3em;
+      text-shadow: 0 0 8px #3b82f6aa;
     }
-    .box {
-      background-color: #161b22;
-      padding: 20px;
-      border-radius: 10px;
+    p {
+      font-size: 1.2rem;
+      margin: 0.5em 0;
+      line-height: 1.5;
+    }
+    a.button {
       display: inline-block;
-      box-shadow: 0 0 10px #58a6ff80;
+      margin-top: 1.5em;
+      padding: 12px 30px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #f9fafb;
+      background: #2563eb;
+      border-radius: 12px;
+      text-decoration: none;
+      box-shadow: 0 4px 12px #2563ebaa;
+      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    button {
-      background-color: #238636;
-      color: white;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 16px;
+    a.button:hover {
+      background: #1e40af;
+      box-shadow: 0 6px 18px #1e40afcc;
     }
-    button:hover {
-      background-color: #2ea043;
+    .note {
+      margin-top: 1.5em;
+      font-size: 0.9rem;
+      color: #94a3b8;
+      max-width: 400px;
     }
   </style>
 </head>
 <body>
-  <div class="box">
-    <h1>LifeSteal - PapuServer</h1>
-    <p>🖥️ <strong>IP:</strong> <span id="ip">papuserver.xyz</span></p>
-    <p>📟 <strong>Puerto:</strong> <span>19132</span></p>
-    <p>👥 <strong>Máximo:</strong> 45 jugadores</p>
-    <p>💀 Al morir no revives, ¡cada corazón cuenta!</p>
-    <br>
-    <button onclick="copiarIP()">📋 Copiar IP</button>
-    <p id="copiado" style="color: #58a6ff; display:none;">¡IP copiada al portapapeles!</p>
-    <br><br>
-    <p>📱 Abre Minecraft Bedrock → Jugar → Servidores → Agregar servidor</p>
-  </div>
-
-  <script>
-    function copiarIP() {
-      const ip = document.getElementById("ip").innerText;
-      navigator.clipboard.writeText(ip).then(() => {
-        document.getElementById("copiado").style.display = "block";
-        setTimeout(() => {
-          document.getElementById("copiado").style.display = "none";
-        }, 2000);
-      });
-    }
-  </script>
+  <h1>LifeSteal - PapuServer</h1>
+  <p>Haz clic en el botón para abrir Minecraft y agregar el servidor.</p>
+  <a class="button" href="minecraft://?addExternalServer=papuserver.xyz|papuserver.xyz:19132">Agregar servidor a Minecraft</a>
+  <p class="note">* Funciona en dispositivos Android, iOS y PC con Minecraft Bedrock instalado.</p>
 </body>
 </html>
