@@ -2,7 +2,8 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Minecraft Server</title> <!-- Título en la pestaña -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Minecraft Server</title>
   <style>
     body {
       background: linear-gradient(135deg, #1f2937, #111827);
@@ -12,36 +13,37 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      height: 100vh;
+      min-height: 100vh;
       margin: 0;
       text-align: center;
-      padding: 20px;
+      padding: 24px;
     }
     h1 {
       color: #3b82f6;
-      font-size: 2.8rem;
-      margin-bottom: 0.3em;
+      font-size: 2.5rem;
+      margin-bottom: 0.5em;
       text-shadow: 0 0 8px #3b82f6aa;
       text-transform: lowercase;
     }
     p {
       font-size: 1.2rem;
-      margin: 0.5em 0;
+      margin: 0.6em 0;
       line-height: 1.5;
-      text-transform: none;
     }
     a.button {
       display: inline-block;
       margin-top: 1.5em;
-      padding: 12px 30px;
-      font-size: 1.1rem;
+      padding: 16px 32px;
+      font-size: 1.3rem;
       font-weight: 600;
-      color: #f9fafb;
+      color: #ffffff;
       background: #2563eb;
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
-      box-shadow: 0 4px 12px #2563ebaa;
+      box-shadow: 0 4px 14px #2563eb88;
       transition: background 0.3s ease, box-shadow 0.3s ease;
+      width: 100%;
+      max-width: 320px;
     }
     a.button:hover {
       background: #1e40af;
@@ -49,16 +51,32 @@
     }
     .note {
       margin-top: 1.5em;
-      font-size: 0.9rem;
+      font-size: 1rem;
       color: #94a3b8;
-      max-width: 400px;
+      max-width: 420px;
+    }
+
+    /* Ajustes para pantallas pequeñas */
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1.1rem;
+      }
+      a.button {
+        font-size: 1.2rem;
+        padding: 14px 24px;
+      }
     }
   </style>
 </head>
 <body>
   <h1>papuserver.xyz</h1>
   <p>haz clic en el botón para abrir minecraft y agregar el servidor.</p>
-  <a class="button" href="minecraft://?addExternalServer=papuserver.xyz|papuserver.xyz:19132">Agregar servidor a Minecraft</a>
+  <a class="button" href="minecraft://?addExternalServer=papuserver.xyz|papuserver.xyz:19132">
+    agregar servidor a minecraft
+  </a>
   <p class="note">* funciona en dispositivos android, ios y pc con minecraft bedrock instalado.</p>
 </body>
 </html>
